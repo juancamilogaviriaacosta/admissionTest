@@ -37,9 +37,10 @@ public class MedicationRepositoryImpl implements IMedicationRepository {
         Category cat = categoryJpaRepository.findByName(dto.getCategory_name()).get(0);
         med.setCategory(cat);
         medicationJpaRepository.save(med);
+        dto.setId(med.getId());
 
         CategoryDto catDto = new CategoryDto();
-        catDto.setId(catDto.getId());
+        catDto.setId(cat.getId());
         catDto.setName(cat.getName());
         dto.setCategory(catDto);
         return dto;
