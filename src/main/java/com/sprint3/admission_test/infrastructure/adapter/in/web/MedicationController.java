@@ -27,7 +27,7 @@ public class MedicationController {
 
     @PostMapping
     public ResponseEntity<MedicationDto> createMedication(@RequestBody MedicationDto dto) {
-        medicationUseCase.createMedication(dto);
+        dto = medicationUseCase.createMedication(dto);
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
 
