@@ -10,6 +10,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/medications")
 public class MedicationController {
@@ -26,6 +29,13 @@ public class MedicationController {
     public ResponseEntity<MedicationDto> createMedication(@RequestBody MedicationDto dto) {
         medicationUseCase.createMedication(dto);
         return ResponseEntity.status(HttpStatus.OK).body(dto);
+    }
+
+    @GetMapping("/category/{category}")
+    public ResponseEntity<List<Medication>> getMedicationById(
+            @PathVariable String category, @RequestParam("expiration-after") LocalDate expirationAfter) {
+        System.out.println("category " + category + " - " + "expirationAfter " + expirationAfter);
+        return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
 }
