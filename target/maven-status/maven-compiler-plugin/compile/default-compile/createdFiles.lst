@@ -1,0 +1,4 @@
+com\sprint3\admission_test\domain\dtos\MedicationDto.class
+com\sprint3\admission_test\domain\dtos\CategoryDto.class
+com\sprint3\admission_test\domain\dtos\CategoryDto$CategoryDtoBuilder.class
+com\sprint3\admission_test\domain\dtos\MedicationDto$MedicationDtoBuilder.class

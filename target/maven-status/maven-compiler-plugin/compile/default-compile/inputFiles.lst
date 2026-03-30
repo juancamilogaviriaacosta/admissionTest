@@ -2,6 +2,8 @@ C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admissi
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\application\ports\in\IMedicationUseCase.java
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\application\ports\out\IMedicationRepository.java
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\application\useCases\MedicationUseCaseImpl.java
+C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\domain\dtos\CategoryDto.java
+C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\domain\dtos\MedicationDto.java
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\domain\exceptions\NotFoundException.java
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\domain\model\Category.java
 C:\Users\Administrator\Documents\admissionTest\src\main\java\com\sprint3\admission_test\domain\model\Medication.java
