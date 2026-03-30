@@ -10,6 +10,8 @@ import com.sprint3.admission_test.infrastructure.adapter.out.persistence.jpaRepo
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -44,6 +46,11 @@ public class MedicationRepositoryImpl implements IMedicationRepository {
         catDto.setName(cat.getName());
         dto.setCategory(catDto);
         return dto;
+    }
+
+    @Override
+    public List<Medication> findMedicationByCategory(String category, LocalDate expirationAfter) {
+        return medicationJpaRepository.findMedicationByCategory(category, expirationAfter);
     }
 
 }

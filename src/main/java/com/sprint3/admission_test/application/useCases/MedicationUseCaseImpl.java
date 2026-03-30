@@ -8,6 +8,9 @@ import com.sprint3.admission_test.domain.model.Medication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Service
 public class MedicationUseCaseImpl implements IMedicationUseCase {
 
@@ -24,5 +27,10 @@ public class MedicationUseCaseImpl implements IMedicationUseCase {
     @Override
     public MedicationDto createMedication(MedicationDto dto) {
         return medicationRepository.createMedication(dto);
+    }
+
+    @Override
+    public List<Medication> findMedicationByCategory(String category, LocalDate expirationAfter) {
+        return medicationRepository.findMedicationByCategory(category, expirationAfter);
     }
 }

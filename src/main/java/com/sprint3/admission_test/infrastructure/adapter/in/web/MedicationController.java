@@ -32,10 +32,11 @@ public class MedicationController {
     }
 
     @GetMapping("/category/{category}")
-    public ResponseEntity<List<Medication>> getMedicationById(
+    public ResponseEntity<List<Medication>> getMedicationByCategory(
             @PathVariable String category, @RequestParam("expiration-after") LocalDate expirationAfter) {
         System.out.println("category " + category + " - " + "expirationAfter " + expirationAfter);
-        return ResponseEntity.status(HttpStatus.OK).body(null);
+        List<Medication> medications = medicationUseCase.findMedicationByCategory(category, expirationAfter);
+        return ResponseEntity.status(HttpStatus.OK).body(medications);
     }
 
 }
