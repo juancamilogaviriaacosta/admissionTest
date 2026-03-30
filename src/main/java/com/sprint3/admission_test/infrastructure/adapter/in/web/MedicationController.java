@@ -3,6 +3,8 @@ package com.sprint3.admission_test.infrastructure.adapter.in.web;
 import com.sprint3.admission_test.application.ports.in.IMedicationUseCase;
 import com.sprint3.admission_test.domain.dtos.MedicationDto;
 import com.sprint3.admission_test.domain.model.Medication;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,7 @@ public class MedicationController {
 
     @PostMapping
     public ResponseEntity<MedicationDto> createMedication(@RequestBody MedicationDto dto) {
+        medicationUseCase.createMedication(dto);
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
 
